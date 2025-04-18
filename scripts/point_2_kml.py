@@ -1,6 +1,6 @@
 from pyproj import CRS, Transformer
 
-def save_single_point_to_kml(point_utm_list, output_kml_file, point_name="UTM Point"):
+def save_single_point_to_kml(point_utm_list, file_name, point_name="UTM Point"):
     """
     Saves a single UTM point (WGS84 Zone 17S) to a KML file.
 
@@ -49,6 +49,7 @@ def save_single_point_to_kml(point_utm_list, output_kml_file, point_name="UTM Po
 <kml xmlns="http://www.opengis.net/kml/2.2">
   <Document>
     <name>Single Point KML</name>
+    <description>{file_name}</description>
     <!-- Optional: Define a style for the point marker -->
     <Style id="pointStyle">
       <IconStyle>
